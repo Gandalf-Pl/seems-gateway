@@ -8,7 +8,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 @Component
-public class PerCustomFilter implements GlobalFilter, OrderedFilter {
+public class PreCustomFilter implements GlobalFilter, OrderedFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
