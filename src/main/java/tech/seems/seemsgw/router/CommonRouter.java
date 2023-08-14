@@ -13,6 +13,9 @@ public class CommonRouter {
                 .route(p -> p.path("/get")
                         .filters(f -> f.addRequestHeader("test", "seems"))
                         .uri("https://baidu.com")
-                ).build();
+                )
+                .route(p -> p.path("/seems")
+                        .uri("lb://seems-dubbo-demo"))
+                .build();
     }
 }
